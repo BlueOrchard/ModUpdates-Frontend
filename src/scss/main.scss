@@ -1,1 +1,19 @@
-@import "header";
+// Global Variables
+@import "global-variables";
+
+// Typography
+@import "import/typography";
+
+// Change box sizing
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+// Normalize
+@import "import/normalize";
+
+// Header Styles
+@import "partial/header";

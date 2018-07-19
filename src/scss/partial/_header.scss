@@ -1,0 +1,41 @@
+.header{
+    display: flex;
+    padding: 10px;
+    box-shadow: $boxShadow;
+}
+
+.logo{
+    width: 50px;
+
+    img{
+        width: 100%;
+        display: block;
+    }
+}
+
+.search{
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.281);
+    border-radius: 30px;
+    padding: 0 10px;
+    border: 1px solid #FFF;
+
+    input{
+        border: 0;
+        width: calc(100% - 40px);
+        background: transparent;
+        font-weight: 300;
+    }
+
+    button{
+        width: 40px;
+        text-align: center;
+        border: 0;
+        background: 0;
+        cursor: pointer;
+    }
+}
