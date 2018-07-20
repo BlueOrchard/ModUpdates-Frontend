@@ -14,7 +14,7 @@ deploy:
   secret_access_key: $AWS_SECRET
   bucket: "mod-updates"
   skip_cleanup: true
-  local_dir: build
+  local_dir: dist
 
 script:
   - npm run build
