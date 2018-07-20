@@ -15,7 +15,7 @@
 
 .search{
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     display: flex;
     align-items: center;
     margin-left: 40px;
@@ -37,5 +37,58 @@
         border: 0;
         background: 0;
         cursor: pointer;
+    }
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+
+    a{
+        color: $fontColor;
+        font-weight: bold;
+        font-size: 0.85em;
+        line-height: 1;
+        margin: 0 10px;
+    }
+}
+
+.right-profile{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    .avatar-name{
+        p{
+            line-height: 1;
+            margin: 0;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 0.85em;
+        }
+    }
+
+    .avatar{
+        height: 35px;
+        width: 35px;
+        border-radius: 100%;
+        overflow: hidden;
+        border: 1px solid $green;
+    
+        .white-border{
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            border: 1px solid #FFF;
+            background: rgb(238, 238, 238);
+            overflow: hidden;
+        }
+    
+        img{
+            height: 100%;
+            width: auto;
+            display: block;
+        }
     }
 }
