@@ -11,11 +11,14 @@ node_js:
 #   - node_modules
 
 deploy:
+  on:
+    branch: master
   provider: s3
-  access_key_id: $AWS_ACESS
+  access_key_id: $AWS_ACCESS
   secret_access_key: $AWS_SECRET
   bucket: "mod-updates"
   skip_cleanup: true
+  local_dir: build
 
 script:
   - npm run build
