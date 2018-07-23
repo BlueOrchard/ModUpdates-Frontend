@@ -20,4 +20,4 @@ deploy:
   cache_control: "max-age=21600"
   local_dir: dist
 after_deploy:
-  - cloudfront-invalidate -d $CLOUDFRONT_DISTRIBUTION_ID
+  - cloudfront-invalidate -d $CLOUDFRONT_DISTRIBUTION_ID '/*'
