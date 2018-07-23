@@ -2,22 +2,13 @@ branches:
   only:
     - master
 
-matrix:
-  include:
-    - language: node_js
-      node_js:
-        - "10"
-
-    - language: python
-      python:
-        - "3.5"
-      cache: pip
-      install:
-        - pip install awscli
-
+language: node_js
+node_js:
+  - "10"
+install:
+  - npm i cloudfront-invalidate
 script:
   - npm run build
-
 deploy:
   on:
     branch: master
@@ -28,7 +19,5 @@ deploy:
   skip_cleanup: true
   cache_control: "max-age=21600"
   local_dir: dist
-
 after_deploy:
-  - aws configure set preview.cloudfront true
-  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+  - cloudfront-invalidate -d $CLOUDFRONT_DISTRIBUTION_ID
