@@ -5,6 +5,9 @@ branches:
 language: node_js
 node_js:
   - "10"
+install:
+  - npm install -g travis-ci-cloudfront-invalidation
+  - npm install
 script:
   - npm run build
 deploy:
