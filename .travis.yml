@@ -5,8 +5,6 @@ branches:
 language: node_js
 node_js:
   - "10"
-install:
-  - npm install -g travis-ci-cloudfront-invalidation
 script:
   - npm run build
 deploy:
@@ -19,5 +17,3 @@ deploy:
   skip_cleanup: true
   cache_control: "max-age=21600"
   local_dir: dist
-after_deploy:
-  - travis-ci-cloudfront-invalidation -a $AWS_ACCESS -s $AWS_SECRET -c $CLOUDFRONT_DISTRIBUTION_ID -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST -o 'master,stage'
