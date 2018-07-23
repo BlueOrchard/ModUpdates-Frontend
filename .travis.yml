@@ -2,19 +2,32 @@ branches:
   only:
     - master
 
-language: node_js
-node_js:
-  - "10"
+matrix:
+  include:
+    - language: node_js
+      node_js:
+        - "10"
 
-deploy:
-  on:
-    branch: master
-  provider: s3
-  access_key_id: $AWS_ACCESS
-  secret_access_key: $AWS_SECRET
-  bucket: "modupdates.com"
-  skip_cleanup: true
-  local_dir: dist
+      script:
+        - npm run build
 
-script:
-  - npm run build
+      deploy:
+        on:
+          branch: master
+        provider: s3
+        access_key_id: $AWS_ACCESS
+        secret_access_key: $AWS_SECRET
+        bucket: "modupdates.com"
+        skip_cleanup: true
+        cache_control: "max-age=21600"
+        local_dir: dist
+
+    - language: python
+      python:
+        - "3.5"
+      cache: pip
+      install:
+        - pip install awscli
+      after_deploy:
+        - aws configure set preview.cloudfront true
+        - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
