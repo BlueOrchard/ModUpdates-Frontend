@@ -1,7 +1,9 @@
 <template>
     <div class="header">
         <div class="logo">
-            <img src="./../assets/logo.png">
+            <router-link to="/">
+                <img src="./../assets/logo.png">
+            </router-link>
         </div>
 
         <div class="search">
@@ -10,7 +12,7 @@
         </div>
 
         <div class="nav-menu">
-            <a href="">Browse</a>
+            <router-link to="/browse">Browse</router-link>
             <a href="">Subscriptions</a>
         </div>
 
