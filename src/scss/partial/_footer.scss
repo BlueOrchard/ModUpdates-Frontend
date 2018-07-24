@@ -1,8 +1,75 @@
 .footer{
     background: #404040;
-    padding: 10px;
+    padding: 20px;
     color: #FFF;
     box-shadow: $boxShadow;
     position: relative;
     z-index: 1;
+    display: flex;
+}
+
+.logo-part{
+    text-align: center;
+    background: rgb(59, 59, 59);
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 250px;
+
+    img{
+        display: block;
+        max-width: 100px;
+        margin: 0 auto 10px;
+    }
+
+    p{
+        font-size: 0.4em;
+        margin: 0;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgb(49, 49, 49);
+        padding-bottom: 5px;
+    }
+
+    a{
+        display: inline-block;
+        color: #FFF;
+        font-size: 0.4em;
+        text-transform: uppercase;
+        margin: 10px 10px 0;
+    }
+}
+
+.nav-part{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+    max-width: 250px;
+    width: 100%;
+
+    a{
+        display: block;
+        color: #FFF;
+        text-transform: uppercase;
+        padding: 10px;
+        font-size: 0.4em;
+        //border-bottom: 1px solid rgb(34, 34, 34);
+        background: rgb(59, 59, 59);
+        border-radius: 5px;
+        margin: 0 0 5px;
+        transition: 0.25s all;
+
+        i{
+            margin: 0 5px 0 0;
+        }
+
+        &:hover{
+            background: lighten(rgb(59, 59, 59), 10%);
+            padding-left: 20px;
+        }
+
+        &:last-child{
+            border-bottom: 0;
+            margin: 0;
+        }
+    }
 }
