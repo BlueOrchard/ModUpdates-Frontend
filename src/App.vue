@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    
     <div class="body-content">
       <SideBar/>
       <Body/>
