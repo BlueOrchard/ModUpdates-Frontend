@@ -4,6 +4,11 @@
     box-shadow: $boxShadow;
     position: relative;
     background: #FFF;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .logo{
