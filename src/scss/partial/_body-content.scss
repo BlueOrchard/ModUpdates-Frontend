@@ -1,5 +1,5 @@
 .body-content{
-    min-height: 100vh;
+    min-height: calc(100vh - 290px);
     display: flex;
     margin-top: 55px;
 }
