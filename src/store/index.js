@@ -1,17 +1,14 @@
 import Vue from 'vue';
 import VueX from 'vuex';
 
-Vue.use(VueX);
+import apiCalls from './modules/apiCalls.js';
+import singlePost from './modules/singlePost.js';
 
-const apiCalls = {
-    namespaced: true,
-    state: {
-        apiDomain: "api.modupdates.com"
-    },
-};
+Vue.use(VueX);
 
 export default new VueX.Store({
     modules: {
+        singlePost: singlePost,
         apiCalls: apiCalls
     }
 });
