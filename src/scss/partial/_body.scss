@@ -38,6 +38,7 @@
         margin: 0;
         padding: 0 5px;
         margin: 0 0 5px;
+        color: $fontColor;
     }
 
     .versions{
@@ -61,4 +62,13 @@
 
 .home-loop{
     padding: 30px;
+}
+
+.post-mod{
+    padding: 30px;
+
+    .title{
+        margin: 0;
+        font-weight: 300;
+    }
 }

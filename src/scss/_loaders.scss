@@ -1,0 +1,27 @@
+.loading{
+    background: #c7c7c7;
+    min-height: 30px;
+    border-radius: 5px;
+    animation: 2s pulsate-loading linear infinite;
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: 75px;
+        height: 100%;
+        background: rgb(204, 204, 204);
+        transform: skew(-20deg);
+        animation: 0.75s superfast linear infinite;
+    }
+}
+
+h1{
+    &.loading{
+        min-height: 50px;
+    }
+}
