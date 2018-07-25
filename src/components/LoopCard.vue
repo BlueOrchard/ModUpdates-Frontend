@@ -1,11 +1,16 @@
 <template>
     <div class="loop-card">
-        <div class="image">
-            <div class="image-holder">
+        <router-link to="/post">
+            <div class="image">
+                <div class="image-holder">
 
+                </div>
             </div>
-        </div>
-        <p class="title">Title Here</p>
+        </router-link>
+         
+        <router-link to="/post">
+            <p class="title">Title Here</p>
+        </router-link>
 
         <div class="versions">
             <span class="version"><i class="fas fa-code-branch"></i>1.13</span>
