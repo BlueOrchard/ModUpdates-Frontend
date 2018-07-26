@@ -1,6 +1,6 @@
 <template>
     <div class="loop-card">
-        <router-link to="/post">
+        <router-link to="/mod">
             <div class="image">
                 <div class="image-holder">
 
@@ -25,3 +25,4 @@ export default {
     name: "LoopCard"
 }
 </script>
+

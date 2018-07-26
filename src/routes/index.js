@@ -10,7 +10,7 @@ import Post from './router-components/Post.vue';
 const routes = [
     { path: '/', component: Home},
     { path: '/browse', component: Browse},
-    { path: '/post', component: Post}
+    { path: '/mod', component: Post}
 ]
 
 const router = new VueRouter({
