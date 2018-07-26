@@ -49,7 +49,7 @@
             background: $green;
             color: #FFF;
             padding: 2px 5px;
-            font-size: 0.5em;
+            font-size: 0.7em;
             border-radius: 5px;
             margin: 0 3px 10px;
 
@@ -70,5 +70,82 @@
     .title{
         margin: 0;
         font-weight: 300;
+        font-size: 3em;
+
+        .grey{
+            font-size: 0.5em;
+            color: rgb(199, 199, 199);
+        }
+    }
+
+    .tabs{
+        display: flex;
+        border-bottom: 2px solid #DDD;
+        cursor: default;
+        font-size: 0.8em;
+
+        .tab{
+            margin: 0 30px 0 0;
+            padding: 5px;
+            margin-bottom: -2px;
+            transition: 0.25s all;
+            border-bottom: 2px solid #DDD;
+            cursor: pointer;
+
+            &.active-tab{
+                border-bottom: 2px solid $green;
+                cursor: default;
+            }
+        }
+    }
+
+    .description{
+        margin: 20px 0;
+    }
+
+    .files{
+        margin: 20px 0;
+
+        h3{
+            font-weight: 300;
+            border-bottom: 1px solid #DDD;
+        }
+
+        .subversion{
+            .subversion-entry{
+                display: flex;
+                align-items: center;
+
+                a{
+                    color: $fontColor;
+                    padding: 2px 0;
+                }
+
+                .release-type{
+                    text-transform: uppercase;
+                    font-size: 0.5em;
+                    line-height: 1;
+                    background: #000;
+                    color: #FFF;
+                    padding: 2px 6px;
+                    border-radius: 3px;
+                    margin: 0 8px 0 0;
+                    width: 70px;
+                    text-align: center;
+
+                    &.alpha{
+                        background: $yellow;
+                    }
+
+                    &.beta{
+                        background: $brown;
+                    }
+
+                    &.release{
+                        background: $green;
+                    }
+                }
+            }
+        }
     }
 }

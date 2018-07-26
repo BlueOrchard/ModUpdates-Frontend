@@ -1,7 +1,13 @@
 <template>
     <div class="sidebar">
-        <div v-if="this.$route.path.indexOf('/browse') > -1" class="single-mod">
-            <span class="button-subscribe">Placeholder</span>
+        <!-- Browse Route Sidebar -->
+        <div v-if="this.$route.path.indexOf('/browse') > -1" class="browse">
+
+        </div>
+
+        <!-- Single Post Route Sidebar -->
+        <div v-if="this.$route.path.indexOf('/mod') > -1" class="single-mod">
+            <span class="button-subscribe">Subscribe</span>
         </div>
     </div>
 </template>
