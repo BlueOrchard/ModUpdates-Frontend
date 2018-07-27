@@ -1,3 +1,4 @@
 * text=auto
 
 *.scss     text
+*.css     text
